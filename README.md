@@ -17,6 +17,7 @@ It showcases my profile, skills, projects, social activities, and provides a dir
 
 ---
 ## Project Structure 
+
 ```
 src/
 │── assets/
@@ -36,6 +37,7 @@ src/
 │── index.css
 │── main.jsx
 ```
+
 📦 Installation & Setup
 
 Clone the repository:
@@ -44,27 +46,23 @@ git clone https://github.com/itzKieuMinh05/My-Portfolio
 cd your-repo-name
 
 Install dependencies:
-
+```
 npm install
-
+```
 
 Start development server:
-
+```
 npm run dev
-
-
+```
 Build for production:
-
+```
 npm run build
-
+```
 
 Preview production build:
-
+```
 npm run preview
-
-Example:
-
+```
 📬 Contact
-Email: minh.kieutananh@gmail.com
 GitHub: https://github.com/itzKieuMinh05
 
