@@ -1,12 +1,73 @@
-# React + Vite
+# 🌐 Personal Portfolio – Kiều Tấn Anh Minh
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my personal portfolio website built with **React**, **Vite**, and **TailwindCSS**.  
+It showcases my profile, skills, projects, social activities, and provides a direct link to **download my CV**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- **Modern responsive UI** using TailwindCSS  
+- **Hero section with CV download button**  
+- **Reusable Button components (Primary & Outline)**  
+- Clean and scalable component structure  
+- Optimized images and asset loading  
+- Smooth animations and transitions  
+- Fully responsive for mobile, tablet, and desktop
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+## Project Structure 
+src/
+│
+├── assets/
+├── components/
+│   ├── about.jsx
+│   ├── contact.jsx
+│   ├── header.jsx
+│   ├── hero.jsx
+│   ├── navbar.jsx
+│   ├── projectcard.jsx
+│   ├── skillsjsx
+│   ├── skillcard.jsx
+│   └── work.jsx
+│
+├── favicon/
+│   └── (images & icons)
+│
+├── App.jsx
+├── App.css
+├── index.css
+└── main.jsx
+📦 Installation & Setup
+
+Clone the repository:
+
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+
+
+Install dependencies:
+
+npm install
+
+
+Start development server:
+
+npm run dev
+
+
+Build for production:
+
+npm run build
+
+
+Preview production build:
+
+npm run preview
+
+Example:
+
+📬 Contact
+Email: minh.kieutananh@gmail.com
+GitHub: https://github.com/itzKieuMinh05
+
