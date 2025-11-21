@@ -17,6 +17,7 @@ It showcases my profile, skills, projects, social activities, and provides a dir
 
 ---
 ## Project Structure 
+```
 src/
 │── assets/
 │── components/
@@ -34,7 +35,7 @@ src/
 │── App.css
 │── index.css
 │── main.jsx
-
+```
 📦 Installation & Setup
 
 Clone the repository:
