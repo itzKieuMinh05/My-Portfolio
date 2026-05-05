@@ -7,11 +7,12 @@ import PropTypes from "prop-types";
  * Primary Button Component
  */
 const ButtonPrimary = ({
-    href, 
-    target = '_self',
-    label, 
-    icon, 
-    classes
+  href, 
+  target = '_self',
+  label, 
+  icon, 
+  classes,
+  onClick
 }) => {
     if (href) {
         const isDownload = href.endsWith('.pdf') || href.endsWith('.docx');
@@ -33,8 +34,8 @@ const ButtonPrimary = ({
             </a>
         );
     } else {
-        return (
-            <button className={"btn btn-primary " + (classes || "")}>
+      return (
+        <button onClick={onClick} className={"btn btn-primary " + (classes || "")}>
                 {label}
 
                 {icon ?
@@ -54,6 +55,7 @@ ButtonPrimary.propTypes = {
   label: PropTypes.string.isRequired,
   icon: PropTypes.string,
   classes: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 /**
@@ -65,6 +67,7 @@ const ButtonOutline = ({
   label,
   icon,
   classes = "",
+  onClick,
 }) => {
   if (href) {
     return (
@@ -85,7 +88,7 @@ const ButtonOutline = ({
   }
 
   return (
-    <button className={`btn btn-outline ${classes}`}>
+    <button onClick={onClick} className={`btn btn-outline ${classes}`}>
       {label}
 
       {icon && (
@@ -103,6 +106,7 @@ ButtonOutline.propTypes = {
   label: PropTypes.string.isRequired,
   icon: PropTypes.string,
   classes: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 export { ButtonPrimary, ButtonOutline };

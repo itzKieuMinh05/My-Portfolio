@@ -4,8 +4,25 @@
  * @returns Components
  */
 import {ButtonPrimary, ButtonOutline} from './button.jsx';
+import { useState } from 'react';
 
 const Hero = () => {
+    const [isCvModalOpen, setIsCvModalOpen] = useState(false);
+
+    const downloadCV = (type) => {
+        const da = '/src/favicon/CV-DA-KieuTanAnhMinh.pdf';
+        const de = '/src/favicon/CV-DE-KieuTanAnhMinh.pdf';
+        const chosen = type === 'da' ? da : de;
+
+        const a = document.createElement('a');
+        a.href = chosen;
+        a.download = '';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        setIsCvModalOpen(false);
+    };
+
     return (
         <section
             id="home"
@@ -30,10 +47,9 @@ const Hero = () => {
                     </h2>
                     <div className="flex items-center gap-3">
                         <ButtonPrimary
-                            href="./src/favicon/KIEUTANANHMINH_CV.pdf"
                             label="Download CV"
                             icon="download"
-                            target="_blank"
+                            onClick={() => setIsCvModalOpen(true)}
                         />
 
                         <ButtonOutline
@@ -57,6 +73,27 @@ const Hero = () => {
                     </figure>
                 </div>
             </div>
+
+            {isCvModalOpen && (
+                <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4" onClick={() => setIsCvModalOpen(false)}>
+                    <div className="bg-zinc-900 rounded-2xl w-full max-w-md p-6" onClick={(e) => e.stopPropagation()}>
+                        <div className="flex items-center justify-between mb-4">
+                            <h3 className="text-lg font-semibold">Download CV</h3>
+                            <button onClick={() => setIsCvModalOpen(false)} className="text-zinc-400">✕</button>
+                        </div>
+
+                        <p className="text-zinc-400 mb-4">Choose the CV you want to download:</p>
+
+                        <div className="flex gap-3">
+                            <button onClick={() => downloadCV('da')} className="flex-1 px-4 py-2 bg-sky-500 hover:bg-sky-600 text-white rounded-lg">Data Analyst</button>
+                            <button onClick={() => downloadCV('de')} className="flex-1 px-4 py-2 bg-zinc-700 hover:bg-zinc-600 text-white rounded-lg">Data Engineer</button>
+                        </div>
+
+                        <p className="text-xs text-zinc-500 mt-4">Replace the files in <code>/src/favicon/</code> with your actual PDFs.</p>
+                    </div>
+                </div>
+            )}
+
         </section>
     )
 }

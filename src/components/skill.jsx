@@ -46,6 +46,31 @@ const skillItem = [
     label: 'TailwindCSS',
     desc: 'User Interface'
   },
+  {
+    imgSrc: '/src/favicon/kafka.png',
+    label: 'Apache Kafka',
+    desc: 'Distributed streaming platform'
+  },
+  {
+    imgSrc: '/src/favicon/spark.png',
+    label: 'Apache Spark',
+    desc: 'Big data processing engine'
+  },
+  {
+    imgSrc: '/src/favicon/airflow.png',
+    label: 'Apache Airflow',
+    desc: 'Workflow orchestration'
+  },
+  {
+    imgSrc: '/src/favicon/docker.png',
+    label: 'Docker',
+    desc: 'Containerization'
+  },
+  {
+    imgSrc: '/src/favicon/dbt.png',
+    label: 'dbt',
+    desc: 'Analytics engineering / transformations'
+  }
 ];
 
 
